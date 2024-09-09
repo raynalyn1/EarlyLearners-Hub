@@ -9,6 +9,8 @@ import kid from '../../images/kid.png';
 import teacher from '../../images/teacher.png';
 import confitte from '../../images/confitte.png';
 import Footer from '../../components/Footer';
+import teaching from '../../images/teaching.png';
+import Buttons from '../../components/Buttons'
 
 const AboutUs = () => {
   return (
@@ -80,9 +82,20 @@ const AboutUs = () => {
           </div>
 
         </div>
-        <div className='bg-red-600 w-full h-[50vh] rounded-lg'></div>
+        <div className='bg-red-600 w-full h-[50vh] rounded-lg'>fwefwefwef</div>
 
         <div className="w-full h-64 bg-blue-500 rounded-b-[50%]"></div>
+        <div className='w-full h-[80vh] p-9 flex gap-9'>
+          <div className='w-[70%] h-auto flex flex-col gap-5'>
+            <h1 className='text-[1.5rem] font-bold text-center text-[#5B3A29]'>Services Offered</h1>
+            <div className='w-full flex gap-9'>
+              <div className='w-[50%] h-[50vh] bg-red-600 bg-[#EDC285] rounded-lg' style={{ boxShadow: '6px 6px 8px rgba(0, 0, 0, 0.5), -4px -4px 8px rgba(0, 0, 0, 0.1)' }}></div>
+              <div className='w-[50%] h-[50vh] bg-red-900 bg-[#EDC285] rounded-lg' style={{ boxShadow: '6px 6px 8px rgba(0, 0, 0, 0.5), -4px -4px 8px rgba(0, 0, 0, 0.1)' }} ></div>
+            </div>
+            <Buttons styleType='primary1' label='Learn More' />
+          </div>
+          <img src={teaching} alt='pic' className='rounded-lg' />
+        </div>
       </div>
       <Footer />
     </div>
