@@ -11,8 +11,19 @@ import confitte from '../../images/confitte.png';
 import Footer from '../../components/Footer';
 import teaching from '../../images/teaching.png';
 import Buttons from '../../components/Buttons'
-
+import teach from '../../images/teach.png'
+import play from '../../images/play.png'
+import Card from '../../components/Card';
+import teachi from  '../../images/teacher/teach.png'
+import { useNavigate } from 'react-router-dom'
+ 
 const AboutUs = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate('/services');
+  };
+
   return (
     <div className='flex flex-col justify-center items-center px-9'>
       <div
@@ -82,17 +93,39 @@ const AboutUs = () => {
           </div>
 
         </div>
-        <div className='bg-red-600 w-full h-[50vh] rounded-lg'>fwefwefwef</div>
+        <div className='w-full h-[40vh] rounded-lg flex flex-row p-9 justify-center '>
+            <img src={teach} alt='image3' className='w-[40%] h-[25vh] rounded-3xl' style={{ boxShadow: '-9px -9px 8px rgba(255, 255, 255, 0.9)' }} />
+            <img src={play} alt='image4' className='w-[40%] h-[25vh] mt-20 rounded-xl' style={{ boxShadow: '-9px -9px 8px rgba(255, 255, 255, 0.9)' }}/>
+        </div>
 
-        <div className="w-full h-64 bg-blue-500 rounded-b-[50%]"></div>
-        <div className='w-full h-[80vh] p-9 flex gap-9'>
+        <div className="w-full h-[50vh] bg-[#EBCEA8]">
+          <div className='rounded-b-[50%] bg-[#ECB671] w-full h-[20vh] flex flex-col gap-2 justify-center items-center'>
+            <h1 className='text-[#5B3A29] text-[2rem] font-bold'>Esteemed Teachers</h1>
+            <p className='w-[35vw] text-center'>Experienced and passionate educators who are committed to guiding and inspiring your child through their educational journey.</p>
+          </div>
+          <div className='flex gap-16 justify-center'>
+            <Card imgSrc={teachi} title="Ms. Emille Panganiban" description="Teacher in the classs" />
+            <Card imgSrc={teachi} title="Ms. Emille Panganiban" description="Teacher in the classs" />
+            <Card imgSrc={teachi} title="Ms. Emille Panganiban" description="Teacher in the classs" />
+            <Card imgSrc={teachi} title="Ms. Emille Panganiban" description="Teacher in the classs" />
+          </div>
+        </div>
+
+
+        <div className='w-full h-[60vh] p-9 flex gap-9'>
           <div className='w-[70%] h-auto flex flex-col gap-5'>
             <h1 className='text-[1.5rem] font-bold text-center text-[#5B3A29]'>Services Offered</h1>
             <div className='w-full flex gap-9'>
-              <div className='w-[50%] h-[50vh] bg-red-600 bg-[#EDC285] rounded-lg' style={{ boxShadow: '6px 6px 8px rgba(0, 0, 0, 0.5), -4px -4px 8px rgba(0, 0, 0, 0.1)' }}></div>
-              <div className='w-[50%] h-[50vh] bg-red-900 bg-[#EDC285] rounded-lg' style={{ boxShadow: '6px 6px 8px rgba(0, 0, 0, 0.5), -4px -4px 8px rgba(0, 0, 0, 0.1)' }} ></div>
+              <div className='w-[50%] h-[40vh] bg-[#EDC285] rounded-lg p-5' style={{ boxShadow: '6px 6px 8px rgba(0, 0, 0, 0.5), -4px -4px 8px rgba(0, 0, 0, 0.1)' }}>
+                <h1 className='font-bold'>Flexible Tutoring Options</h1>
+                <p className='text-center mt-[10vh]'>Whether you prefer <span className='font-bold'>one-on-one</span> sessions or <span className='font-bold'>group</span> classes, we offer flexible options to suit your child’s needs and your schedule.</p>
+              </div>
+              <div className='w-[50%] h-[40vh] bg-[#EDC285] rounded-lg p-5' style={{ boxShadow: '6px 6px 8px rgba(0, 0, 0, 0.5), -4px -4px 8px rgba(0, 0, 0, 0.1)' }} >
+                <h1 className='font-bold'>Parental Involvement</h1>
+                <p className='text-center mt-[10vh]'>We believe in collaborating with parents to create a holistic learning experience, ensuring alignment between home and school learning.</p>
+              </div>
             </div>
-            <Buttons styleType='primary1' label='Learn More' />
+            <Buttons styleType='primary1' label='Learn More' onClick={handleLearnMoreClick} />
           </div>
           <img src={teaching} alt='pic' className='rounded-lg' />
         </div>

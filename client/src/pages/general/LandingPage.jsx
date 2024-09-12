@@ -20,17 +20,24 @@
 import React from 'react'
 import img from '../../images/landingimg.png'
 import Buttons from '../../components/Buttons'
+import Cards from '../../components/Cards'
 
 const LandingPage = () => {
   return (
     <div className='bg-[#F1F1F1] w-full h-auto px-10 pb-10'>
       <div className='bg-[#EBCEA8] w-full h-[100vh]'>
         <div className='border border-black w-full h-[60%] flex gap-9'>
-          <div className='w-[50%] bg-slate-600 flex flex-col gap-[4rem] p-12 justify-center'>
-            <h1 className='text-[50px] ml-[5vw] freckle-face'>Enhance Learning <br/> with Group Tutoring <br/> at EarlyLearnersHub <br/> Tutorial Services!</h1>
+          <div className='w-[50%] flex flex-col gap-[4rem] p-12 justify-center'>
+            <h1 className='text-[50px] ml-[5vw]'>Enhance Learning <br/> with Group Tutoring <br/> at EarlyLearnersHub <br/> Tutorial Services!</h1>
             <Buttons styleType="primary" label="ENROLL NOW"/>
           </div>
-          <img src={img} alt="" />
+          <img src={img} alt="pic" className='h-[50vh] mt-9'/>
+        </div>
+        <div className='border border-black px-9 py-2'>
+          <h1 className='text-[1.5rem]'>Explore Fun Activities</h1>
+          <div className='flex border gap-3'>
+              <Cards />
+          </div>
         </div>
       </div>
     </div>

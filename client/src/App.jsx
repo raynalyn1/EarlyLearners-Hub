@@ -4,6 +4,7 @@ import AdminLayout from './layouts/AdminLayout';
 import GeneralLayout from './layouts/GeneralLayout';
 import ParentLayout from './layouts/ParentLayout';
 import Loader from './components/Loader'; // Loader component
+import Services from './pages/general/Services';
 
 // Lazy load the pages
 const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
@@ -59,6 +60,7 @@ const AppRoutes = () => {
       <Route path="/about" element={<GeneralLayout><AboutUs /></GeneralLayout>} />
       <Route path="/login" element={<GeneralLayout><Login /></GeneralLayout>} />
       <Route path="/register" element={<GeneralLayout><Register /></GeneralLayout>} />
+      <Route path="/services" element={<GeneralLayout><Services /></GeneralLayout>} />
 
       {/* Admin Pages */}
       <Route path="/admin" element={<Navigate to="/admin/dashboard" />} /> {/* Default to dashboard */}
