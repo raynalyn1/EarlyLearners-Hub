@@ -1,47 +1,229 @@
-// import React from 'react';
-
-// const LandingPage = () => {
-//   return (
-//     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-//       <div className="text-center">
-//         <h1 className="text-4xl font-bold text-blue-600">Welcome to Early Learners Hub</h1>
-//         <p className="mt-4 text-gray-700">
-//           Your one-stop solution for engaging content for young learners!
-//         </p>
-//         <button className="mt-6 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">
-//           Get Started
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default LandingPage;
-import React from 'react'
-import img from '../../images/landingimg.png'
-import Buttons from '../../components/Buttons'
-import Cards from '../../components/Cards'
+import React from "react";
+import img1 from "../../images/happy.png";
+import img2 from "../../images/creative.png";
+import img3 from "../../images/learn.png";
+import img4 from "../../images/Explore.png";
+import img5 from "../../images/fun.png";
+import img6 from "../../images/star.png";
+import img7 from "../../images/book.png";
+import img8 from "../../images/titser.png";
+import img9 from "../../images/brain.png";
+import img10 from "../../images/handshake.png";
+import img11 from "../../images/Bullseye.png";
+import img12 from "../../images/coin.png";
+import img13 from "../../images/kiddo.png"; // Main image for right section
+import img14 from "../../images/A.png";
+import img15 from "../../images/B.png";
+import img16 from "../../images/C.png";
+import img17 from "../../images/light.png";  // Updated from img
+import img18 from "../../images/gem.png";    // Updated from img
+import Buttons from "../../components/Buttons";
+import Footer from "../../components/Footer";
+import mainImg from "../../images/landingimg.png";
 
 const LandingPage = () => {
   return (
-    <div className='bg-[#F1F1F1] w-full h-auto px-10 pb-10'>
-      <div className='bg-[#EBCEA8] w-full h-[100vh]'>
-        <div className='border border-black w-full h-[60%] flex gap-9'>
-          <div className='w-[50%] flex flex-col gap-[4rem] p-12 justify-center'>
-            <h1 className='text-[50px] ml-[5vw]'>Enhance Learning <br/> with Group Tutoring <br/> at EarlyLearnersHub <br/> Tutorial Services!</h1>
-            <Buttons styleType="primary" label="ENROLL NOW"/>
+    <div>
+      <div className="bg-[#F1F1F1] w-full px-10 pb-10 relative">
+        {/* Header Section */}
+        <div className="bg-[#EBCEA8] w-full flex justify-center items-center pb-20 relative">
+          <div className="w-full max-w-[1200px] flex md:flex-row flex-col-reverse gap-9 items-center">
+            <div className="w-full md:w-[50%] flex flex-col gap-[2rem] justify-center">
+              <div className="text-[45px] md:text-[50px] font-[700] leading-tight text-black ml-[3rem] mt-[2rem] ">
+                Enhance Learning <br /> with Group Tutoring at EarlyLearnersHub
+                Tutorial Services!
+              </div>
+              <div className="flex justify-start">
+                <Buttons styleType="primary" label="ENROLL NOW!" />
+              </div>
+            </div>
+            <div className="w-full md:w-[50%] flex justify-end items-center ">
+              <img
+                src={mainImg}
+                alt="pic"
+                className="h-[67vh] max-h-[100vh] object-contain w-full mt-[1rem] "
+              />
+            </div>
           </div>
-          <img src={img} alt="pic" className='h-[50vh] mt-9'/>
         </div>
-        <div className='border border-black px-9 py-2'>
-          <h1 className='text-[1.5rem]'>Explore Fun Activities</h1>
-          <div className='flex border gap-3'>
-              <Cards />
+
+        {/* Activities Section */}
+        <div className="bg-[#EBCEA8] w-full  relative  ">
+          <div className="text-[20px] font-semibold mb-7 flex-start ml-[5rem] ">
+            Explore Fun Activities
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-[5rem] ">
+            <div className="text-center">
+              <img
+                src={img1}
+                alt="Happy Learning"
+                className="rounded-lg object-cover w-full h-[200px]"
+              />
+              <div className="text-lg font-semibold mt-4">Happy Learning</div>
+              <div className="text-black-500">Imagination Center</div>
+            </div>
+            <div className="text-center">
+              <img
+                src={img2}
+                alt="Creative Playtime"
+                className="rounded-lg object-cover w-full h-[200px]"
+              />
+              <div className="text-lg font-semibold mt-4">
+                Creative Playtime
+              </div>
+              <div className="text-black-500">Imagination Center</div>
+            </div>
+            <div className="text-center">
+              <img
+                src={img3}
+                alt="Giggle and Learn"
+                className="rounded-lg object-cover w-full h-[200px]"
+              />
+              <div className="text-lg font-semibold mt-4">Giggle and Learn</div>
+              <div className="text-black-500">Laughing Academy</div>
+            </div>
+            <div className="text-center">
+              <img
+                src={img4}
+                alt="Let's Explore"
+                className="rounded-lg object-cover w-full h-[200px]"
+              />
+              <div className="text-lg font-semibold mt-4">Let's Explore</div>
+              <div className="text-black-500">Discovering New Things</div>
+            </div>
+            <div className="text-center">
+              <img
+                src={img5}
+                alt="Fun is Here!"
+                className="rounded-lg object-cover w-full h-[200px]"
+              />
+              <div className="text-lg font-semibold mt-4">Fun is Here!</div>
+              <div className="text-black-500">Lily Colors, ABCs</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="bg-[#EBCEA8] w-full px-20 py-20 relative  ">
+          <div className="flex justify-between items-center">
+            {/* Left Side: List of benefits */}
+            <div className="flex flex-col gap-4 w-full md:w-[50%]">
+              <div className="text-[20px] font-semibold ">
+                Discover the benefits of our group tutoring sessions:
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={img6} alt="Star" className="w-[40px]" />
+                <span className="font-semibold text-[18px]">
+                  Collaborative Learning
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={img7} alt="Book" className="w-[40px]" />
+                <span className="font-semibold text-[18px]">
+                  Interactive Sessions
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={img8} alt="Teacher" className="w-[40px]" />
+                <span className="font-semibold text-[18px]">
+                  Expert Guidance
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={img9} alt="Brain" className="w-[40px]" />
+                <span className="font-semibold text-[18px]">
+                  Enhanced Problem-Solving Skills
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={img10} alt="Handshake" className="w-[40px]" />
+                <span className="font-semibold text-[18px]">
+                  Social Skills Development
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={img11} alt="Bullseye" className="w-[40px]" />
+                <span className="font-semibold text-[18px]">
+                  Diverse Perspectives
+                </span>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src={img12} alt="Coin" className="w-[40px]" />
+
+                <span className="font-semibold text-[18px]">
+                  Affordable Learning
+                </span>
+              </div>
+            </div>
+
+            {/* Right Side: Main Image with ABC blocks */}
+            <div className="w-full md:w-[50%] flex justify-center relative">
+              <div className="relative">
+                <img
+                  src={img13}
+                  alt="Kid with ABC blocks"
+                  className="w-[250px] h-auto"
+                />
+                <div className="absolute top-[65%] left-[10%] w-[50px]">
+                  <img src={img14} alt="A Block" />
+                </div>
+                <div className="absolute top-[75%] right-[10%] w-[50px]">
+                  <img src={img15} alt="B Block" />
+                </div>
+                <div className="absolute bottom-[10%] left-[20%] w-[50px]">
+                  <img src={img16} alt="C Block" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* About Us Section Button */}
+          <div className="flex justify-center py-10 mt-[1rem]">
+            <button className="bg-[#f5a227] hover:bg-[#FFB84E] text-black font-semibold py-3 px-8 rounded-lg">
+              Discover more About Us
+            </button>
+          </div>
+          <div className="text-center text-[24px] font-semibold mb-8">
+  PILLARS OF STRENGTH
+</div>
+          {/* New Section Below Button */}
+<div className="flex justify-around py-10 gap-6">
+  <div className="text-center border border-gray-300 p-10 rounded-lg w-[30%] bg-white shadow-md">
+    <img src={img11} alt="Bullseye Icon" className="mx-auto mb-4 w-[70px]" />
+    <h3 className="text-lg font-semibold">Our Mission</h3>
+    <p>
+      To create a safe, engaging, and enjoyable learning platform that supports
+      early childhood education, providing interactive content that helps kids
+      learn and grow.
+    </p>
+  </div>
+
+  <div className="text-center border border-gray-300 p-10 rounded-lg w-[30%] bg-white shadow-md">
+    <img src={img17} alt="Light Bulb Icon" className="mx-auto mb-4 w-[70px]" />
+    <h3 className="text-lg font-semibold">Our Vision</h3>
+    <p>
+      To inspire a love of learning in kindergarten kids through fun,
+      interactive, and educational activities.
+    </p>
+  </div>
+
+  <div className="text-center border border-gray-300 p-10 rounded-lg w-[30%] bg-white shadow-md">
+    <img src={img18} alt="Gem Icon" className="mx-auto mb-4 w-[70px]" />
+    <h3 className="text-lg font-semibold">Our Values</h3>
+    <p>
+      Our values prioritize fun, basic skills, creativity, safety, and inclusion,
+      collaborating with teachers, parents, and experts to create a secure,
+      kid-friendly platform.
+    </p>
+  </div>
+</div>
+
         </div>
       </div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

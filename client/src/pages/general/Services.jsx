@@ -16,7 +16,7 @@ const Services = () => {
           backgroundPosition: 'center',
           width: '100%',
           height: '500px',
-          marginTop: '-2.5vh',
+          marginTop: '',
         }}
         alt="About Us Image"
       >
@@ -31,7 +31,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className='bg-[#EBCEA8] w-[90%] h-auto p-9'>
+      <div className='bg-[#EBCEA8] w-[100%] h-auto p-9'>
         <div className='flex w-full h-[25vh] p-5 gap-9'>
           <img src={list} alt="list" />
           <div className='w-[85%] h-full p-5'>

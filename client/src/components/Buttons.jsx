@@ -1,12 +1,12 @@
 const Buttons = ({ label, onClick, styleType, icon }) => {
     const baseStyle1 =
-      "w-[25%] px-4 py-2 font-semibold text-white rounded-lg flex items-center justify-center";
+      "w-[25%] px-4 py-2 font-semibold text-black rounded-lg flex items-center justify-center";
 
-    const baseStyle3 = "w-[25%] h-10 rounded-lg"
+    const baseStyle3 = "w-[25%] h-10 rounded-lg font-semibold "
   
     const styles = {
-      primary: `${baseStyle3} bg-[#EB9721] hover:bg-[#EBA732] ml-[14vh]`,
-      primary1: `${baseStyle1} bg-[#EB9721] hover:bg-[#EBA732] mx-auto`,
+      primary: `${baseStyle3} bg-[#EB9721] hover:bg-[#EBA732] ml-[12rem] mt-[2rem] `,
+      primary1: `${baseStyle1} bg-[#EB9721] hover:bg-[#EBA732] mx-auto w-auto mt-[6rem] `,
     };
   
     return (
